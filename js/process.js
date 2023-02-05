@@ -6,7 +6,8 @@ async function caller(event) {
 
 
 
-async function emailSenderSaver() {
+async function emailSenderSaver(event) {
+  event.preventDefault();
   // var url = 'http://localhost:8888/HTTP/Tech/email-aggregator/index.php'
   var url = 'https://webdevelopercanada.website/HTTP/Tech/email-aggregator/index.php'
 
@@ -15,9 +16,17 @@ async function emailSenderSaver() {
     url: url,
     data: { body: JSON.stringify({ "email": email }) },
     type: 'POST',
-    success: function (response) {
-      console.log("\nemailSender()->response: ", response)
+    success: function (json, textStatus, jqXHR) {
+      // jQuery XMLHttpRequest
+      console.log("\emailSenderSaver()->response: ", json, jqXHR.status)
+      if(jqXHR.status === 200){
+        const form = document.getElementsByTagName("form")
+        form[0].innerHTML = `
+        <h1>Thanks, your list has been sent.</h1>
+        `
+      }
     },
-  });
+  })
+  
 }
 
