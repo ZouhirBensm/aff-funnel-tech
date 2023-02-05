@@ -1,0 +1,56 @@
+<!-- https://zouhirbensm.github.io/aff-funnel-tech/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Foobar</title>
+  <link href="./css.css" rel="stylesheet">
+  <link href="./freehosting.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./imgs/favicon.png" type="image/png">
+  <script src="https://kit.fontawesome.com/80d236052e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="promotion-banner">
+    <span>Awsome <span style="color:rgb(205, 255, 205);"> Deals</span> from affiliation, for limited time.</span>
+  </div>
+  <div id="home-container">
+    <header>
+      <a href="/">
+        <img id="main-logo" src="./imgs/foobar.png">
+      </a>
+    </header>
+
+
+
+    <!-- <form onsubmit="return asyncCall1(e);">
+      <h1>Get a list of free hosting providers:</h1>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email">
+      <input type="submit" value="Send me the list!"/>
+
+    </form>
+    <script src="js/asyncCall1.js"></script> -->
+
+    <form onsubmit="caller(event)">
+      <h1>Get a list of free hosting providers:</h1>
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" id="email" pattern="^[^@]+@[^@.]+\.{1}\w{1,6}$" required>
+      <!-- <input type="submit" value="Send me the list!" onclick="asyncCall1(event)"> -->
+      <button type="submit">Send me the list!</button>
+    </form>
+    
+    <script src="js/process.js"></script>
+    
+    
+  </div>
+
+
+
+
+</body>
+
+</html>
